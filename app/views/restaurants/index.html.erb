@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1>Our Restaurants:</h1>
+      <% @restaurants.each do |restaurant| %>
+      <h2><%=link_to restaurant.name, restaurant_path(restaurant) %></h2>
+      <h3><%= restaurant.category %></h3>
+      <h4><%= restaurant.address %></h4>
+      <% end %>
+      <%= link_to "create new restaurant", new_restaurant_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
